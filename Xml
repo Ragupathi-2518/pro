@@ -1,0 +1,1416 @@
+1.CREATE AN EXPOSURE OF WEB APPLICATION AND TOOLS
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs"
+Inherits="EX1.WebForm1" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<asp:Label ID="Label1" runat="server" Font-Size="Large"></asp:Label>
+</div>
+</form>
+</body>
+</html>
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+namespace EX1
+{
+public partial class WebForm1 : System.Web.UI.Page
+{
+protected void Page_Load(object sender, EventArgs e)
+{
+Label1.Text = DateTime.Now.ToString("dd/MM/yyyy");
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT
+E.S Arts and Science College (Co-Ed)
+2.IMPLEMENT THE HTML CONTROLS
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs"
+Inherits="program_2_html_controls.WebForm1" %>
+<!DOCTYPE html PUBLIC "
+-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+<style type="text/css">
+.style1
+{
+width: 100%;
+}
+.style2
+{
+height: 26px;
+}
+</style>
+</head>
+<body>
+<div>
+<form id="form1" runat="server">
+<table class="style1">
+<tr>
+<td>
+Name:</td>
+<td>
+<asp:TextBox ID="txtname" runat="server"></asp:TextBox>
+</td>
+</tr>
+<tr>
+<td>
+Street:</td>
+<td>
+<asp:TextBox ID="txtstreet" runat="server"></asp:TextBox>
+</td>
+</tr>
+<tr>
+<td>
+City:</td>
+E.S Arts and Science College (Co-Ed)
+<td>
+<asp:TextBox ID="txtcity" runat="server"></asp:TextBox>
+</td>
+</tr>
+<tr>
+<td>
+State:</td>
+<td>
+<asp:TextBox ID="txtstate runat="server"></asp:TextBox>
+</td>
+</tr>
+<tr>
+<td class="style2">
+</td>
+<td class="style2">
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;</td>
+<td id="displayrow" runat="server">
+&nbsp;</td>
+</tr>
+</table>
+</div>
+<p>
+<asp:Button ID="btnclick" runat="server" Text="Click" OnClick="btnclick_click" />
+<asp:Label ID="lbldisplay"runat="server"></asp:Label>
+</p>
+</form>
+</body>
+</html>
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+namespace program_2_html_controls
+{
+public partial class WebForm1:System.Web.UI.Page
+{
+protected void Page_Load(object sender, EventArgs e)
+{
+}
+{
+protected void btnclick_click(object sender, EventArgs e)
+string str = "";
+str += txtname.Text + "<br />";
+str += txtstreet.Text + "<br />";
+str += txtcity.Text + "<br />";
+str += txtstate.Text + "<br />";
+displayrow.InnerHtml = str;
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT
+E.S Arts and Science College (Co-Ed)
+3.IMPLEMENT THE SERVER CONTROLS
+/>
+<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master"
+AutoEventWireup="true"
+CodeBehind="Default.aspx.cs" Inherits="server_controls._Default" %>
+<asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+</asp:Content>
+<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+<p>
+<br />
+<asp:Label ID="lblname" runat="server" Text="Enter your name"></asp:Label>
+<asp:TextBox ID="txtname" runat="server"></asp:TextBox>
+</p>
+<p>
+<asp:Button ID="btnsubmit" runat="server" Text="Greet me" onclick="btnsubmit_Click"
+<asp:Label ID="lblgreeting" runat="server"></asp:Label>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+</asp:Content>
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+namespace server_controls
+{
+public partial class _Default : System.Web.UI.Page
+{
+protected void Page_Load(object sender, EventArgs e)
+{
+}
+protected void btnsubmit_Click(object sender, EventArgs e)
+{
+lblgreeting.Text = "Hello, " + txtname.Text + "!";
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT:
+E.S Arts and Science College (Co-Ed)
+4.WEB APPLICATION USING WEB CONTROLS
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs"
+Inherits="prgram_4_web_controls.WebForm1" %>
+<!DOCTYPE html PUBLIC "
+-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<asp:Label ID="lblname" runat="server" Text="Student Name:"></asp:Label>
+<asp:TextBox ID="txtname" runat="server"></asp:TextBox>
+<br />
+<br />
+<asp:Label ID="lbldepartment" runat="server" Text="Department:"></asp:Label>
+<asp:DropDownList ID="ddldepartment" runat="server">
+<asp:ListItem>Computer science</asp:ListItem>
+<asp:ListItem>Electric</asp:ListItem>
+<asp:ListItem>Mechanical</asp:ListItem>
+</asp:DropDownList>
+<br />
+<br />
+<asp:Label ID="lblmode" runat="server" Text="Mode of learning:"></asp:Label>
+<asp:RadioButtonList ID="rblmode" runat="server">
+<asp:ListItem>online</asp:ListItem>
+<asp:ListItem>offline</asp:ListItem>
+</asp:RadioButtonList>
+<br />
+<asp:Label ID="lbllanguage" runat="server" Text="Programming language
+known:"></asp:Label>
+<br />
+<asp:CheckBoxList ID="cbllanguage" runat="server">
+<asp:ListItem>C</asp:ListItem>
+<asp:ListItem>Java</asp:ListItem>
+<asp:ListItem>Python</asp:ListItem>
+<asp:ListItem>C++</asp:ListItem>
+</asp:CheckBoxList>
+<br />
+E.S Arts and Science College (Co-Ed)
+<asp:Button ID="btnsubmit" runat="server" Text="Register"
+OnClick="btnsubmit_Click"/>
+<br />
+<br />
+<asp:Label ID="lbldisplay" runat="server"></asp:Label>
+</div>
+</form>
+</body>
+</html>
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+namespace prgram_4_web_controls
+{
+public partial class WebForm1 : System.Web.UI.Page
+{
+protected void Page_Load(object sender, EventArgs e)
+{
+}
+{
+protected void btnsubmit_Click(object sender, EventArgs e)
+String name = txtname.Text.Trim();
+String department = ddldepartment.SelectedValue;
+String mode = rblmode.SelectedItem != null ? rblmode.SelectedItem.Text : "Not
+Selected";
+{
+String language = "";
+foreach (ListItem item in cbllanguage.Items)
+if (item.Selected)
+{
+language += item.Text + ",";
+}
+}
+if (language.EndsWith(","))
+{
+language = language.Substring(0, language.Length - 2);
+}
+if (String.IsNullOrEmpty(name))
+{
+lbldisplay.Text = "Please select a department.";
+lbldisplay.ForeColor = System.Drawing.Color.Red;
+return;
+}
+lbldisplay.ForeColor = System.Drawing.Color.Blue;
+lbldisplay.Text = "<b>StudentName:</b>+name+<br/>" +
+"<b>Department:</b>+department+<br/>" + "<b>Mode of learning:</b>+mode+<br/>" +
+"<b>Programming language known:</b>+language";
+E.S Arts and Science College (Co-Ed)
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT
+E.S Arts and Science College (Co-Ed)
+5.WEB APPLICATION USING LIST CONTROLS
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs"
+Inherits="program_5_list_controls.WebForm1" %>
+<!DOCTYPE html PUBLIC "
+-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+</head>
+<body>
+<form id="form1" runat="server">
+<asp:Label ID="lbllanguage" runat="server"
+Text="Select your programming language:"></asp:Label>
+<br />
+<asp:DropDownList ID="ddllanguage" runat="server">
+<asp:ListItem>Python</asp:ListItem>
+<asp:ListItem>Java</asp:ListItem>
+<asp:ListItem>C++</asp:ListItem>
+</asp:DropDownList>
+<br />
+<br />
+<asp:Label ID="lblhobbies" runat="server" Text="Select your hobbies:"></asp:Label>
+<br />
+<asp:CheckBoxList ID="cblhobbies" runat="server">
+<asp:ListItem>reading</asp:ListItem>
+<asp:ListItem>gaming</asp:ListItem>
+<asp:ListItem>traveling</asp:ListItem>
+</asp:CheckBoxList>
+<br />
+<asp:Label ID="lblcompany" runat="server" Text="Select your company:"></asp:Label>
+<asp:RadioButtonList ID="rblcountry" runat="server">
+<asp:ListItem>India</asp:ListItem>
+<asp:ListItem>USA</asp:ListItem>
+<asp:ListItem>UK</asp:ListItem>
+</asp:RadioButtonList>
+<asp:Button ID="btnsubmit" runat="server" onclick="btnsubmit_Click"
+Text="Submit" />
+<p>
+<asp:Label ID="lblresult" runat="server"></asp:Label>
+</p>
+</form>
+</body>
+</html>
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+namespace program_5_list_controls
+{
+public partial class WebForm1:System.Web.UI.Page
+{
+protected void Page_Load(object sender, EventArgs e)
+{
+}
+{
+protected void btnsubmit_Click(object sender, EventArgs e)
+String selectedLanguage = ddllanguage.SelectedItem.Text.Trim();
+String selectedHobbies = "";
+foreach (ListItem item in cblhobbies.Items)
+{
+if (item.Selected)
+{
+selectedHobbies += item.Text.Trim() + ",";
+}
+}
+if (selectedHobbies.EndsWith(","))
+{
+selectedHobbies = selectedHobbies.Substring(0, selectedHobbies.Length - 2);
+}
+String selectedCountry = rblcountry.SelectedItem != null ?
+rblcountry.SelectedItem.Text.Trim() : "Not selected";
+lblresult.Text = "<b>Selected programming language:</b>+selectedLanguage<br/>" +
+"<b>Selected Hobbies:</b>+selectedHobbies<br/>" + "<b>Selected
+country:</b>+selectedCountry";
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT
+E.S Arts and Science College (Co-Ed)
+6.WEB PAGE DESIGN RICH CONTROLS USING VALIDATE CONTROLS WITH
+FILE CONCEPT
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs"
+Inherits="program_6_rich_controls.WebForm1" %>
+<!DOCTYPE html PUBLIC "
+-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<asp:Label ID="lblName" runat="server" Text="Name:"></asp:Label>
+<asp:TextBox ID="txtName" runat="server" CssClass="rich-input"></asp:TextBox>
+<asp:RequiredFieldValidator ID="rfvName" runat="server"
+ControlToValidate="txtName" ErrorMessage="Name Required"
+ForeColor="Red"></asp:RequiredFieldValidator>
+<br />
+<br />
+<asp:Label ID="lblEmail" runat="server" Text="Email:"></asp:Label>
+<asp:TextBox ID="txtEmail" runat="server" CssClass="rich-input"></asp:TextBox>
+<asp:RequiredFieldValidator ID="rfvEmail" runat="server"
+ControlToValidate="txtEmail" ErrorMessage="Email Required"
+ForeColor="Red"></asp:RequiredFieldValidator>
+<br />
+<asp:RegularExpressionValidator ID="revEmail" runat="server"
+ControlToValidate="txtEmail" ErrorMessage="Invalid Email" ForeColor="Red"
+ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-
+.]\w+)*"></asp:RegularExpressionValidator>
+<br />
+<br />
+Salary:<asp:TextBox ID="txtSal" runat="server"></asp:TextBox>
+<asp:RangeValidator ID="rvSal" runat="server" BackColor="White"
+ControlToValidate="txtSal" ErrorMessage="Salary must from 10000 to 20000"
+ForeColor="#FF0066" MaximumValue="20000"
+MinimumValue="10000"></asp:RangeValidator>
+<br />
+<br />
+Data of joining:<asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+<asp:Button ID="btnSave" runat="server" CssClass="rich-button"
+E.S Arts and Science College (Co-Ed)
+Text="Save to File" OnClick="btnSave_Click" />
+<br />
+<br />
+<br />
+<asp:Label ID="lblMessage" runat="server" ForeColor="Black"></asp:Label>
+</div>
+</form>
+</body>
+</html>
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+namespace program_6_rich_controls
+{
+public partial class WebForm1 : System.Web.UI.Page
+{
+protected void Page_Load(object sender, EventArgs e)
+{
+}
+{
+protected void btnSave_Click(object sender, EventArgs e)
+if (Page.IsValid)
+{
+String userData = "Name: {txtName.Text}, Email: {txtEmail.Text}, Salary:
+{txtSalary.Int}, Date: {DateTime.Now}\n";
+//File concept:Append to data.txt
+String filePath = Server.MapPath("~/data.txt");
+System.IO.File.AppendAllText(filePath, userData);
+lblMessage.Text = "Data saved to file successfully!";
+txtName.Text = "";// clear inputs
+txtEmail.Text = "";
+txtSal.Text = "";
+}
+else
+{
+lblMessage.Text = "Please fix validation errors.";
+}
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT
+E.S Arts and Science College (Co-Ed)
+7.WEB APPLICATION USING DATA CONTROLS
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs"
+Inherits="program_7_grid_view.WebForm1" %>
+<!DOCTYPE html PUBLIC "
+-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+</head>
+<body>
+<form id="form1" runat="server">
+<asp:GridView ID="gvdata" runat="server" AutoGenerateColumns="False"
+CellPadding="15">
+<Columns>
+<asp:BoundField DataField="ID" HeaderText="ID" />
+<asp:BoundField DataField="Name" HeaderText="Name" />
+<asp:BoundField DataField="City" HeaderText="City" />
+</Columns>
+</asp:GridView>
+<br />
+<div>
+</div>
+</form>
+</body>
+</html>
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+namespace program_7_grid_view
+{
+public partial class WebForm1 : System.Web.UI.Page
+{
+protected void Page_Load(object sender, EventArgs e)
+{
+if(!IsPostBack)
+{
+gvdata.DataSource=GetSampleData();
+gvdata.DataBind();
+}
+}
+private List<Employee>GetSampleData()
+{
+return new List<Employee>
+{
+new Employee { ID=1,Name="John",City="NYC"},
+new Employee { ID=2,Name="Jane",City="LA"},
+new Employee { ID=3,Name="Mike",City="Chicago"}
+};
+}
+}
+}
+public class Employee
+{
+public int ID {get;set;}
+public string Name {get;set;}
+public string City {get;set;}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT:
+E.S Arts and Science College (Co-Ed)
+8.DATA BINDING WITH WEB CONTROLS
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs"
+Inherits="program_8_databinding.WebForm1" %>
+<!DOCTYPE html PUBLIC "
+-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<h2>DropDownList</h2>
+<asp:DropDownList ID="ddlnames" runat="server">
+</asp:DropDownList>
+<br />
+<br />
+<br />
+<h2>ListBox</h2>
+<asp:ListBox ID="lstnames" runat="server"></asp:ListBox>
+<br />
+<br />
+<h2>GridView</h2>
+<asp:GridView ID="gvnames" runat="server" AutoGenerateColumns="False"
+AutoGenerateSelectButton="True">
+</asp:GridView>
+<h2>Selected Item</h2>
+<asp:Label ID="lblresult" runat="server"></asp:Label>
+</div>
+</form>
+</body>
+</html>
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+namespace program_8_databinding
+{
+public partial class WebForm1 : System.Web.UI.Page
+{
+protected void Page_Load(object sender, EventArgs e)
+{
+if (!IsPostBack)
+{
+BindData();
+}
+}
+void BindData()
+{
+DataTable dt = new DataTable();
+dt.Columns.Add("ID");
+dt.Columns.Add("Name");
+dt.Rows.Add("1", "Ravi");
+dt.Rows.Add("2", "Anitha");
+dt.Rows.Add("3", "Kumar");
+dt.Rows.Add("4", "Divya");
+// DropDownList
+ddlnames.DataSource = dt;
+ddlnames.DataTextField = "Name";
+ddlnames.DataValueField = "ID";
+ddlnames.DataBind();
+//ListBox
+lstnames.DataSource = dt;
+lstnames.DataTextField = "Name";
+lstnames.DataValueField = "ID";
+lstnames.DataBind();
+//GridView
+gvnames.DataSource = dt;
+gvnames.DataBind();
+E.S Arts and Science College (Co-Ed)
+protected void ddlnames_SelectedIndexChanged(object sender,EventArgs e)
+}
+{
+lblresult.Text = "Selected from DropDownList:"+ ddlnames.SelectedItem.Text;
+protected void lstnames_SelectedIntexChanged(object sender,EventArgs e)
+}
+{
+lblresult.Text = "Selected from ListBox:" + lstnames.SelectedItem.Text;
+protected void gvnames_SelectedIndexChanged(object sender,EventArgs e)
+}
+{
+lblresult.Text = "Selected from GridView:" + gvnames.SelectedRow.Cells[2].Text;
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT:
+DropDownList
+Ravi
+ListBox
+Ravi
+Anitha
+kumar
+Divya
+GridView
+ID Name
+Select 1 Ravi
+Select 2 Anitha
+Select 3 kumar
+Select 4 Divya
+Selected Item
+Selected from GridView:Ravi
+E.S Arts and Science College (Co-Ed)
+9.DATA BINDING WITH DATA CONTROLS
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs"
+Inherits="program_9_datacontrols.WebForm1" %>
+<!DOCTYPE html PUBLIC "
+-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+</head>
+<body>
+<form id="form1" runat="server">
+<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="True"
+onselectedindexchanged="GridView1_SelectedIndexChanged">
+</asp:GridView>
+<br />
+</form>
+</body>
+</html>
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+namespace program_9_datacontrols
+{
+public partial class WebForm1 : System.Web.UI.Page
+{
+protected void Page_Load(object sender, EventArgs e)
+{
+if (!IsPostBack)
+BindGrid();
+{
+}
+}
+private void BindGrid()
+{
+DataTable dt = new DataTable();
+dt.Columns.Add("ID");
+dt.Columns.Add("Name");
+dt.Columns.Add("Course");
+dt.Rows.Add("1", "Alice", "Math");
+dt.Rows.Add("2", "Bob", "Physics");
+dt.Rows.Add("3", "Charlie", "Chemistry");
+GridView1.DataSource = dt;
+GridView1.DataBind();
+protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+// Just a placeholder: can be used if selection is enabled
+}
+{
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT
+E.S Arts and Science College (Co-Ed)
+10. DATABASE APPLICATION PERFORM INSERT, UPDATE AND DELETE
+OPERATIONS
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs"
+Inherits="WebApplication1._Default" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<title>CRUD Operations - ASP.NET</title>
+</head>
+<body>
+<form id="form1" runat="server">
+<h2>CRUD Operations</h2>
+<!-- User Input Section -->
+<label for="txtId">ID:</label>
+<asp:TextBox ID="txtId" runat="server" Placeholder="User ID" /><br /><br />
+<label for="txtName">Name:</label>
+<asp:TextBox ID="txtName" runat="server" Placeholder="Name" /><br /><br />
+<label for="txtEmail">Email:</label>
+<asp:TextBox ID="txtEmail" runat="server" Placeholder="Email" /><br /><br />
+<!-- Buttons for CRUD Operations -->
+<asp:Button ID="btnInsert" runat="server" Text="Insert User" OnClick="btnInsert_Click"
+/><br /><br />
+<asp:Button ID="btnUpdate" runat="server" Text="Update User"
+OnClick="btnUpdate_Click" /><br /><br />
+<asp:Button ID="btnDelete" runat="server" Text="Delete User"
+OnClick="btnDelete_Click" /><br /><br />
+<!-- Display Results -->
+<asp:Label ID="lblMessage" runat="server" Text="" ForeColor="Green" /><br /><br />
+</form>
+</body>
+</html>
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE:
+using System;
+using System.Collections.Generic;
+namespace WebApplication1
+{
+public partial class _Default : System.Web.UI.Page
+{
+// List to hold users (In-memory, for demonstration purposes)
+private static List<User> users = new List<User>();
+protected void Page_Load(object sender, EventArgs e)
+{
+// Optionally, you can load existing data or handle any pre-load logic here
+}
+// Insert user into the list
+protected void btnInsert_Click(object sender, EventArgs e)
+{
+int id;
+if (int.TryParse(txtId.Text, out id) && !string.IsNullOrEmpty(txtName.Text) &&
+!string.IsNullOrEmpty(txtEmail.Text))
+{
+User newUser = new User
+{
+Id = id,
+Name = txtName.Text,
+Email = txtEmail.Text
+};
+users.Add(newUser);
+lblMessage.Text = "User inserted successfully!";
+lblMessage.ForeColor = System.Drawing.Color.Green;
+}
+else
+{
+lblMessage.Text = "Please provide valid inputs!";
+lblMessage.ForeColor = System.Drawing.Color.Red;
+}
+}
+// Update user information
+protected void btnUpdate_Click(object sender, EventArgs e)
+{
+int id;
+{
+if (int.TryParse(txtId.Text, out id))
+E.S Arts and Science College (Co-Ed)
+var userToUpdate = users.Find(u => u.Id == id);
+if (userToUpdate != null)
+{
+userToUpdate.Name = txtName.Text;
+userToUpdate.Email = txtEmail.Text;
+lblMessage.Text = "User updated successfully!";
+lblMessage.ForeColor = System.Drawing.Color.Green;
+}
+else
+{
+lblMessage.Text = "User not found!";
+lblMessage.ForeColor = System.Drawing.Color.Red;
+}
+}
+else
+{
+lblMessage.Text = "Please provide a valid ID!";
+lblMessage.ForeColor = System.Drawing.Color.Red;
+}
+}
+// Delete user from the list
+protected void btnDelete_Click(object sender, EventArgs e)
+{
+int id;
+{
+if (int.TryParse(txtId.Text, out id))
+var userToDelete = users.Find(u => u.Id == id);
+if (userToDelete != null)
+{
+users.Remove(userToDelete);
+lblMessage.Text = "User deleted successfully!";
+lblMessage.ForeColor = System.Drawing.Color.Green;
+}
+else
+{
+lblMessage.Text = "User not found!";
+lblMessage.ForeColor = System.Drawing.Color.Red;
+}
+}
+else
+{
+lblMessage.Text = "Please provide a valid ID!";
+lblMessage.ForeColor = System.Drawing.Color.Red;
+}
+}
+E.S Arts and Science College (Co-Ed)
+// Simple User class to represent a user
+public class User
+{
+public int Id { get; set; }
+public string Name { get; set; }
+public string Email { get; set; }
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT
+E.S Arts and Science College (Co-Ed)
+11.DATABASE APPLICATIONPERFORM INSERT , UPDATE , AND DELETE
+OPERATION ,EDIT PAGING AND SORTING OPERATION
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs"
+Inherits="Web11.WebForm1" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ASP.NET CRUD with GridView</title>
+</head>
+<body>
+<form id="form1" runat="server">
+<h2>Employee Management System</h2>
+<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"
+DataKeyNames="Id" AllowPaging="True" AllowSorting="True"
+PageSize="5"
+OnPageIndexChanging="GridView1_PageIndexChanging"
+OnRowEditing="GridView1_RowEditing"
+OnRowUpdating="GridView1_RowUpdating"
+OnRowCancelingEdit="GridView1_RowCancelingEdit"
+OnRowDeleting="GridView1_RowDeleting"
+OnSorting="GridView1_Sorting">
+<Columns>
+<asp:BoundField DataField="Id" HeaderText="ID" ReadOnly="True"
+SortExpression="Id" />
+<asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+<asp:BoundField DataField="Age" HeaderText="Age" SortExpression="Age" />
+<asp:BoundField DataField="Department" HeaderText="Department"
+SortExpression="Department" />
+<asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
+</Columns>
+</asp:GridView>
+<br /><hr /><br />
+<h3>Add New Employee</h3>
+<asp:Label ID="lblMessage" runat="server" ForeColor="Green" /><br />
+Name: <asp:TextBox ID="txtName" runat="server" /><br />
+Age: <asp:TextBox ID="txtAge" runat="server" /><br />
+Department: <asp:TextBox ID="txtDept" runat="server" /><br />
+<asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="btnAdd_Click" />
+</form>
+</body>
+</html>
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE:
+using System;
+using System.Data;
+using System.Data.SqlClient;
+namespace Web11
+{
+public partial class WebForm1 : System.Web.UI.Page
+{
+static string SortExpression = "Id ASC";
+protected void Page_Load(object sender, EventArgs e)
+{
+if (!IsPostBack)
+{
+BindGrid();
+}
+}
+{
+private void BindGrid()
+using (SqlConnection con = new SqlConnection(/* Your connection string here */))
+{
+string query = "SELECT * FROM Employees ORDER BY " + SortExpression;
+SqlDataAdapter da = new SqlDataAdapter(query, con);
+DataTable dt = new DataTable();
+GridView1.DataSource = dt;
+GridView1.DataBind();
+}
+}
+{
+protected void btnAdd_Click(object sender, EventArgs e)
+if (txtName.Text == "" || txtAge.Text == "")
+{
+return;
+}
+{
+using (SqlConnection con = new SqlConnection(/* Your connection string here */))
+string query = "INSERT INTO Employees (Name, Age) VALUES (@Name, @Age)";
+E.S Arts and Science College (Co-Ed)
+SqlCommand cmd = new SqlCommand(query, con);
+cmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());
+cmd.Parameters.AddWithValue("@Age", Convert.ToInt32(txtAge.Text.Trim()));
+con.Open();
+cmd.ExecuteNonQuery();
+con.Close();
+txtName.Text = txtAge.Text = "";
+BindGrid();
+}
+}
+protected void GridView1_PageIndexChanging(object sender,
+System.Web.UI.WebControls.GridViewPageEventArgs e)
+{
+GridView1.PageIndex = e.NewPageIndex;
+BindGrid();
+}
+protected void GridView1_RowEditing(object sender,
+System.Web.UI.WebControls.GridViewEditEventArgs e)
+{
+GridView1.EditIndex = e.NewEditIndex;
+BindGrid();
+}
+protected void GridView1_RowCancelingEdit(object sender,
+System.Web.UI.WebControls.GridViewCancelEditEventArgs e)
+{
+GridView1.EditIndex = -1;
+BindGrid();
+}
+protected void GridView1_RowUpdating(object sender,
+System.Web.UI.WebControls.GridViewUpdateEventArgs e)
+{
+int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
+string name =
+((System.Web.UI.WebControls.TextBox)GridView1.Rows[e.RowIndex].Cells[1].Controls[0]).T
+ext;
+string ageText =
+((System.Web.UI.WebControls.TextBox)GridView1.Rows[e.RowIndex].Cells[2].Controls[0]).T
+ext;
+int age;
+E.S Arts and Science College (Co-Ed)
+{
+}
+{
+Id=@Id";
+if (!int.TryParse(ageText, out age))
+return;
+using (SqlConnection con = new SqlConnection(/* Your connection string here */))
+string query = "UPDATE Employees SET Name=@Name, Age=@Age WHERE
+SqlCommand cmd = new SqlCommand(query, con);
+cmd.Parameters.AddWithValue("@Name", name);
+cmd.Parameters.AddWithValue("@Age", age);
+cmd.Parameters.AddWithValue("@Id", id);
+con.Open();
+cmd.ExecuteNonQuery();
+con.Close();
+GridView1.EditIndex = -1;
+BindGrid();
+}
+}
+protected void GridView1_RowDeleting(object sender,
+System.Web.UI.WebControls.GridViewDeleteEventArgs e)
+{
+int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
+using (SqlConnection con = new SqlConnection(/* Your connection string here */))
+{
+string query = "DELETE FROM Employees WHERE Id=@Id";
+SqlCommand cmd = new SqlCommand(query, con);
+cmd.Parameters.AddWithValue("@Id", id);
+con.Open();
+cmd.ExecuteNonQuery();
+con.Close();
+BindGrid();
+}
+}
+protected void GridView1_Sorting(object sender,
+System.Web.UI.WebControls.GridViewSortEventArgs e)
+{
+string[] sortParts = SortExpression.Split(' ');
+E.S Arts and Science College (Co-Ed)
+if (sortParts[0] == e.SortExpression)
+{
+SortExpression = e.SortExpression + (sortParts[1] == "ASC" ? " DESC" : " ASC");
+}
+else
+{
+SortExpression = e.SortExpression + " ASC";
+}
+BindGrid();
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT
+E.S Arts and Science College (Co-Ed)
+12.IMPLEMENT THE XML CLASSES
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs"
+Inherits="WebApplication20.WebForm1" %>
+<!DOCTYPE html PUBLIC "
+-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>xml classes example</title>
+</head>
+<body>
+<form id="form1" runat="server">
+<div style="font_family:Arial">
+<h2>xml classes example</h2>
+<asp:Button ID="btnCreate" runat="server" Text="Create xml file"
+OnClick="btnCreate_click" />
+<br /><br />
+<asp:Button ID="btnRead" runat="server" Text="Read xml file" OnClick="btnRead_click" />
+<br /><br />
+<asp:Label ID="lblOutput" runat="server" Text=" " ForeColor="Blue"></asp:Label>
+</div>
+</form>
+</body>
+</html>
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE:
+using System;
+using System.IO;
+using System.Text;
+using System.Web.UI;
+using System.Xml;
+namespace WebApplication20
+{
+public partial class WebForm1 : Page
+{
+private string xmlFilePath;
+protected void Page_Load(object sender, EventArgs e)
+{
+xmlFilePath = Server.MapPath("~/App_Data/books.xml");
+}
+protected void btnCreate_click(object sender, EventArgs e)
+{
+try
+{
+XmlDocument doc = new XmlDocument();
+XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
+doc.AppendChild(xmlDeclaration);
+XmlElement root = doc.CreateElement("books");
+doc.AppendChild(root);
+XmlElement book1 = doc.CreateElement("book");
+book1.SetAttribute("id", "1");
+XmlElement title1 = doc.CreateElement("title");
+title1.InnerText = "The Great Gatsby";
+XmlElement author1 = doc.CreateElement("author");
+author1.InnerText = "F. Scott Fitzgerald";
+book1.AppendChild(title1);
+book1.AppendChild(author1);
+root.AppendChild(book1);
+XmlElement book2 = doc.CreateElement("book");
+book2.SetAttribute("id", "2");
+XmlElement title2 = doc.CreateElement("title");
+title2.InnerText = "1984";
+XmlElement author2 = doc.CreateElement("author");
+E.S Arts and Science College (Co-Ed)
+author2.InnerText = "George Orwell";
+book2.AppendChild(title2);
+book2.AppendChild(author2);
+root.AppendChild(book2);
+Directory.CreateDirectory(Server.MapPath("~/App_Data")); // Ensure folder exists
+doc.Save(xmlFilePath);
+lblOutput.Text = "XML file created successfully at: " + xmlFilePath;
+}
+catch (Exception ex)
+{
+lblOutput.Text = "Error creating XML file: " + ex.Message;
+}
+protected void btnRead_click(object sender, EventArgs e)
+}
+{
+try
+{
+if (!File.Exists(xmlFilePath))
+{
+lblOutput.Text = "XML file does not exist. Please create it first.";
+return;
+}
+XmlDocument doc = new XmlDocument();
+doc.Load(xmlFilePath);
+XmlNodeList books = doc.SelectNodes("/books/book");
+StringBuilder sb = new StringBuilder();
+foreach (XmlNode book in books)
+{
+string id = book.Attributes["id"].Value;
+string title = book["title"].InnerText;
+string author = book["author"].InnerText;
+sb.AppendFormat("Book ID: {0}<br/>Title: {1}<br/>Author: {2}<br/><br/>", id,
+title, author);
+}
+lblOutput.Text = sb.ToString();
+}
+catch (Exception ex)
+{
+E.S Arts and Science College (Co-Ed)
+lblOutput.Text = "Error reading XML file: " + ex.Message;
+}
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT
+E.S Arts and Science College (Co-Ed)
+13.IMPLEMENT AUTHENTICATION-AUTHORIZATION
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="authentication-
+authorization13.aspx.cs"
+Inherits="authentication_authorization._13.authentication_authorization13" %>
+<!DOCTYPE html PUBLIC "
+-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<title>Login</title>
+</head>
+<body>
+<form id="form1" runat="server">
+<h2>Login</h2>
+<asp:Label ID="Label1" Text="Username:" runat="server"
+AssociatedControlID="txtUsername" />
+<asp:TextBox ID="txtUsername" runat="server" />
+<br /><br />
+<asp:Label ID="Label2" Text="Password:" runat="server"
+AssociatedControlID="txtPassword" />
+<asp:TextBox ID="txtPassword" TextMode="Password" runat="server" />
+<br /><br />
+<asp:Button Text="Login" ID="btnLogin" runat="server" OnClick="btnLogin_Click" />
+<br /><br />
+<asp:Label ID="lblMessage" ForeColor="Red" runat="server" />
+</form>
+</body>
+</html>
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE:
+using System;
+using System.Web;
+using System.Web.UI;
+namespace authentication_authorization._13
+{
+public partial class authentication_authorization13 : System.Web.UI.Page
+{
+protected void Page_Load(object sender, EventArgs e)
+{
+// Clear any previous messages on first page load
+if (!IsPostBack)
+{
+lblMessage.Text = "";
+}
+}
+{
+protected void btnLogin_Click(object sender, EventArgs e)
+// Hardcoded credentials for demonstration
+string validUsername = "admin";
+string validPassword = "1234";
+string enteredUsername = txtUsername.Text.Trim();
+string enteredPassword = txtPassword.Text.Trim();
+if (enteredUsername == validUsername && enteredPassword == validPassword)
+{
+// Optionally, you can use Session to store user info
+Session["username"] = enteredUsername;
+// Redirect to a protected page after successful login
+Response.Redirect("Welcome.aspx");
+}
+else
+{
+}
+lblMessage.Text = "Invalid username or password.";
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT
+E.S Arts and Science College (Co-Ed)
+14.Ticket Reservation Using asp.net control program
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs"
+Inherits="WebApplication14.WebForm1" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<title>Ticket Reservation</title>
+</head>
+<body>
+<form id="form1" runat="server">
+<div style="width: 400px; margin: 30px auto; font-family: Arial, sans-serif;">
+<h2>Ticket Reservation</h2>
+<asp:Label ID="lblName" runat="server" Text="Name:"
+AssociatedControlID="txtName" />
+<asp:TextBox ID="txtName" runat="server" Width="250px"></asp:TextBox>
+<br /><br />
+<asp:Label ID="lblEmail" runat="server" Text="Email:"
+AssociatedControlID="txtEmail" />
+<asp:TextBox ID="txtEmail" runat="server" Width="250px"></asp:TextBox>
+<br /><br />
+<asp:Label ID="lblTickets" runat="server" Text="Number of Tickets:"
+AssociatedControlID="ddlTickets" />
+<asp:DropDownList ID="ddlTickets" runat="server" Width="100px">
+<asp:ListItem>1</asp:ListItem>
+<asp:ListItem>2</asp:ListItem>
+<asp:ListItem>3</asp:ListItem>
+<asp:ListItem>4</asp:ListItem>
+<asp:ListItem>5</asp:ListItem>
+</asp:DropDownList>
+<br /><br />
+<asp:Button ID="btnReserve" runat="server" Text="Reserve Ticket(s)"
+OnClick="btnReserve_Click" />
+<br /><br />
+<asp:GridView ID="gvReservations" runat="server" AutoGenerateColumns="false"
+Width="100%" EmptyDataText="No reservations yet."
+onselectedindexchanged="gvReservations_SelectedIndexChanged">
+<Columns>
+E.S Arts and Science College (Co-Ed)
+<asp:BoundField HeaderText="Name" DataField="Name" />
+<asp:BoundField HeaderText="Email" DataField="Email" />
+<asp:BoundField HeaderText="Tickets Reserved" DataField="Tickets" />
+</Columns>
+</asp:GridView>
+</div>
+</form>
+</body>
+</html>
+C#:
+using System;
+using System.Collections.Generic;
+using System.Web.UI;
+namespace WebApplication14
+{
+public partial class WebForm1 : System.Web.UI.Page
+{
+public class Reservation
+{
+public string Name { get; set; }
+public string Email { get; set; }
+public int Tickets { get; set; }
+}
+private List<Reservation> Reservations
+{
+get
+{
+if (Session["Reservations"] == null)
+{
+Session["Reservations"] = new List<Reservation>();
+}
+return (List<Reservation>)Session["Reservations"];
+}
+set
+{
+}
+Session["Reservations"] = value;
+}
+E.S Arts and Science College (Co-Ed)
+protected void Page_Load(object sender, EventArgs e)
+{
+if (!IsPostBack)
+{
+BindGrid();
+}
+}
+{
+protected void btnReserve_Click(object sender, EventArgs e)
+if (string.IsNullOrWhiteSpace(txtName.Text) ||
+string.IsNullOrWhiteSpace(txtEmail.Text))
+{
+return;
+}
+var newReservation = new Reservation
+{
+Name = txtName.Text.Trim(),
+Email = txtEmail.Text.Trim(),
+Tickets = int.Parse(ddlTickets.SelectedValue)
+};
+var list = Reservations;
+list.Add(newReservation);
+Reservations = list;
+// Clear inputs
+txtName.Text = "";
+txtEmail.Text = "";
+ddlTickets.SelectedIndex = 0;
+BindGrid();
+}
+{
+private void BindGrid()
+gvReservations.DataSource = Reservations;
+gvReservations.DataBind();
+protected void gvReservations_SelectedIndexChanged(object sender, EventArgs e)
+}
+{
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT:
+E.S Arts and Science College (Co-Ed)
+15.ONLINE EXAMINATION USING ASP.NET CONTROL
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs"
+Inherits="maha_online_examination_pg15.WebForm1" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<title>Simple Online Exam</title>
+</head>
+<body>
+<form id="form1" runat="server">
+<asp:PlaceHolder ID="phQuestions" runat="server"></asp:PlaceHolder>
+<br />
+<asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click"
+/>
+<br /><br />
+<asp:Label ID="lblResult" runat="server" Font-Bold="true"
+ForeColor="Green"></asp:Label>
+</form>
+</body>
+</html >
+E.S Arts and Science College (Co-Ed)
+BEHIND THE CODE:
+using System;
+using System.Collections.Generic;
+using System.Web.UI.WebControls;
+namespace maha_online_examination_pg15
+{
+public partial class WebForm1 : System.Web.UI.Page
+{
+// Question class
+public class Question
+{
+public string Text { get; set; }
+public List<string> Options { get; set; }
+public int CorrectOptionIndex { get; set; }
+}
+// Sample questions
+private List<Question> questions = new List<Question>
+{
+new Question
+{
+Text = "What is the capital of India?",
+Options = new List<string> { "Mumbai", "Delhi", "Chennai", "Kolkata" },
+CorrectOptionIndex = 1
+},
+new Question
+{
+Text = "What is 5 + 7?",
+Options = new List<string> { "10", "11", "12", "13" },
+CorrectOptionIndex = 2
+},
+new Question
+{
+Text = "Which planet is called the Red Planet?",
+Options = new List<string> { "Earth", "Mars", "Jupiter", "Venus" },
+CorrectOptionIndex = 1
+}
+};
+{
+protected void Page_Load(object sender, EventArgs e)
+if (!IsPostBack)
+{
+DisplayQuestions();
+E.S Arts and Science College (Co-Ed)
+}
+}
+private void DisplayQuestions()
+{
+phQuestions.Controls.Clear();
+for (int i = 0; i < questions.Count; i++)
+{
+// Question text label
+Label lblQ = new Label();
+lblQ.Text = "{i + 1}. {questions[i].Text}";
+phQuestions.Controls.Add(lblQ);
+// Add line break
+phQuestions.Controls.Add(new Label { Text = "<br />" });
+// RadioButtonList for options
+RadioButtonList rblOptions = new RadioButtonList();
+rblOptions.ID = "rblQ" + i;
+foreach (var option in questions[i].Options)
+{
+rblOptions.Items.Add(new ListItem(option));
+}
+phQuestions.Controls.Add(rblOptions);
+// Add two line breaks for spacing
+phQuestions.Controls.Add(new Label { Text = "<br />" });
+phQuestions.Controls.Add(new Label { Text = "<br />" });
+}
+}
+{
+protected void btnSubmit_Click(object sender, EventArgs e)
+int score = 0;
+for (int i = 0; i < questions.Count; i++)
+{
+RadioButtonList rbl = (RadioButtonList)phQuestions.FindControl("rblQ" + i);
+if (rbl != null && rbl.SelectedIndex == questions[i].CorrectOptionIndex)
+{
+score++;
+}
+}
+E.S Arts and Science College (Co-Ed)
+lblResult.Text = "You scored {score} out of {questions.Count}";
+}
+}
+}
+E.S Arts and Science College (Co-Ed)
+OUTPUT:
+E.S Arts and Science College (Co-Ed)
+E.S Arts and Science College (Co-Ed)
